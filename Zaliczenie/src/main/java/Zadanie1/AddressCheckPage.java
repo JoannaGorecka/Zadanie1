@@ -19,7 +19,7 @@ public class AddressCheckPage {
     @FindBy(css = ".alert-success")
     private WebElement deleteAddressMessage;
 
-    @FindBy(xpath = "//article[contains(.,'praca')]/div[@class = 'address-footer']//span[contains(., 'Delete')]")
+    @FindBy(xpath = "//article[contains(.,'Domowy')]/div[@class = 'address-footer']//span[contains(., 'Delete')]")
     private WebElement deleteAddress;
 
 

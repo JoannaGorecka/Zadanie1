@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
+
 public class NewAddressFormPage {
 
     public NewAddressFormPage(WebDriver driver) {
@@ -19,6 +21,10 @@ public class NewAddressFormPage {
 
     @FindBy(id = "field-city")
     private WebElement cityField;
+
+    @FindBy(xpath = "//*[@id='field-id_state']/option[4]")
+    private WebElement stateField;
+
 
     @FindBy(id = "field-postcode")
     private WebElement postcodeField;
@@ -38,6 +44,7 @@ public class NewAddressFormPage {
         aliasField.sendKeys(alias);
         addressField.sendKeys(address);
         cityField.sendKeys(city);
+        stateField.click();
         postcodeField.sendKeys(postcode);
         countrySelection.click();
         phoneField.sendKeys(phone);
